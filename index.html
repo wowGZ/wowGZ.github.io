@@ -229,16 +229,6 @@
           </a>
         </li>
       
-        
-        <li class="menu-item menu-item-commonweal">
-          <a href="/404.html" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br>
-            
-            公益404
-          </a>
-        </li>
-      
 
       
     </ul>
@@ -355,21 +345,21 @@
           
             <h2 id="Ubuntu系统安装并配置CodeBlocks的C或C-环境"><a href="#Ubuntu系统安装并配置CodeBlocks的C或C-环境" class="headerlink" title="Ubuntu系统安装并配置CodeBlocks的C或C++环境"></a>Ubuntu系统安装并配置CodeBlocks的C或C++环境</h2><h3 id="Ubuntu系统的安装"><a href="#Ubuntu系统的安装" class="headerlink" title="Ubuntu系统的安装"></a>Ubuntu系统的安装</h3><ol>
 <li><p>首先，自然是先去<a href="https://www.ubuntu.com" target="_blank" rel="noopener">Ubuntu官网</a>下载相应版本的Ubuntu系统。PS：下载的时候记得下载以“.iso”为后缀的文件，千万要记住文件的下载位置哇！！！</p>
-<p><img src="https://github.com/wowGZ/TCPIP/blob/master/picture/1.1.png" alt></p>
-<p><img src="https://github.com/wowGZ/TCPIP/blob/master/picture/1.2.png" alt></p>
-<p><img src="https://github.com/wowGZ/TCPIP/blob/master/picture/1.3.png" alt></p>
-<p><img src="https://github.com/wowGZ/TCPIP/blob/master/picture/1.4.png" alt></p>
-<p><img src="https://github.com/wowGZ/TCPIP/blob/master/picture/1.5.png" alt></p>
+<p><img src="..\pictures\linux\1.1.png" alt></p>
+<p><img src="..\pictures\linux\1.2.png" alt></p>
+<p><img src="..\pictures\linux\1.3.png" alt></p>
+<p><img src="..\pictures\linux\1.4.png" alt></p>
+<p><img src="..\pictures\linux\1.5.png" alt></p>
 </li>
 <li><p>如果你的网速是在是很慢，那么你也可以通过去国内的开源软件镜像网站进行下载，比如：<a href="https://mirrors.tuna.tsinghua.edu.cn/" target="_blank" rel="noopener">清华大学开源软件镜像网站</a>进行下载。</p>
 </li>
 <li><p>下载完成之后，打开你的虚拟机，博主这里使用的是VMware Workstations15 Pro（需要收费，但是许可证的编码网上都有，所以你懂的~），点击添加虚拟机，进行相应的设置之后，选中你所下载的Ubuntu系统的ISO文件就好了。（这个就不再多说了哇，百度上都很多的哇）</p>
 </li>
 <li><p>然后启动虚拟机，进行系统的安装（基本一路next，前往不要忘记自己的密码哇，2333），很简单的啦，gogogo就完了！</p>
-<p><img src="https://github.com/wowGZ/TCPIP/blob/master/picture/1.6.png" alt></p>
+<p><img src="..\pictures\linux\1.6.png" alt></p>
 </li>
 <li><p>这样你的Ubuntu系统就成功的在虚拟机上安装完成了。</p>
-<p><img src="https://github.com/wowGZ/TCPIP/blob/master/picture/1.7.png" alt></p>
+<p><img src="..\pictures\linux\1.7.png" alt></p>
 </li>
 </ol>
 <h3 id="Ubuntu系统中配置CodeBlocks的C或C-环境"><a href="#Ubuntu系统中配置CodeBlocks的C或C-环境" class="headerlink" title="Ubuntu系统中配置CodeBlocks的C或C++环境"></a>Ubuntu系统中配置CodeBlocks的C或C++环境</h3><ol>
@@ -378,13 +368,13 @@
 <li><p>之后，需要下载你的gcc和g++（下载之前可以通过“gcc -version”或“g++ -version”来检验你是否已经下载过这两个），才可以在你的Ubuntu系统中进行C或C++程序的编译和执行。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install gcc</span><br><span class="line">sudo apt install g++</span><br></pre></td></tr></table></figure>
 <p>成功的话如下图（博主之前就已经下载好了，233）：</p>
-<p><img src="https://github.com/wowGZ/TCPIP/blob/master/picture/1.8.png" alt></p>
-<p><img src="https://github.com/wowGZ/TCPIP/blob/master/picture/1.9.png" alt></p>
+<p><img src="..\pictures\linux\1.8.png" alt></p>
+<p><img src="..\pictures\linux\1.9.png" alt></p>
 </li>
 <li><p>下载完这两个之后需要下载CodeBlocks的build文件</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install build-essential</span><br><span class="line">sudo apt install gdb	//一般gdb在下载安装build-essential的时候就安装完成，这里也算是检验一遍吧</span><br></pre></td></tr></table></figure>
 <p>如果下载成功的话再次输入这些命令之后，会出现：</p>
-<p><img src="https://github.com/wowGZ/TCPIP/blob/master/picture/1.10.png" alt></p>
+<p><img src="..\pictures\linux\1.10.png" alt></p>
 </li>
 <li><p>前提需要的环境和编译所需要的文件我们都下载完了，那么就在下载我们的CodeBlocks就好了</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install codeblocks</span><br></pre></td></tr></table></figure>
@@ -396,10 +386,10 @@
 <li><p>选择console application之后也是一路next哇（记得自行填写项目名称和保存的位置，PS保存的路径最好不要出现中文，不然可能会出错哇）。</p>
 </li>
 <li><p>然后项目就创建成功了，你可以在左边的workspace中看见你新建的项目，在source文件夹中找到你的main.cpp然后进行debug，之后在run</p>
-<p><img src="https://github.com/wowGZ/TCPIP/blob/master/picture/1.11.png" alt></p>
+<p><img src="..\pictures\linux\1.11.png" alt></p>
 </li>
 <li><p>成功显示Hello World！，至此为止，你的CodeBlocks就成功的在Ubuntu系统上安装并配置完了。</p>
-<p><img src="https://github.com/wowGZ/TCPIP/blob/master/picture/1.12.png" alt></p>
+<p><img src="..\pictures\linux\1.12.png" alt></p>
 </li>
 </ol>
 
