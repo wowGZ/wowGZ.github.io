@@ -252,6 +252,181 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://wowgz.com.cn/2019/03/11/echo回声服务器客户端/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Guo Zhen">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="WowGz">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/03/11/echo回声服务器客户端/" itemprop="url">Echo回声示例（Ubuntu系统下的服务器端和客户端的C语言简单实现）</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-11T20:59:12+08:00">
+                2019-03-11
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/学习笔记/" itemprop="url" rel="index">
+                    <span itemprop="name">学习笔记</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/03/11/echo回声服务器客户端/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/03/11/echo回声服务器客户端/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2019/03/11/echo回声服务器客户端/" class="leancloud_visitors" data-flag-title="Echo回声示例（Ubuntu系统下的服务器端和客户端的C语言简单实现）">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="Echo回声示例（Ubuntu系统下的服务器端和客户端的C语言简单实现）"><a href="#Echo回声示例（Ubuntu系统下的服务器端和客户端的C语言简单实现）" class="headerlink" title="Echo回声示例（Ubuntu系统下的服务器端和客户端的C语言简单实现）"></a>Echo回声示例（Ubuntu系统下的服务器端和客户端的C语言简单实现）</h1><ul>
+<li>之前写的<a href="https://wowgz.com.cn/2019/03/06/TCP%E5%A5%97%E6%8E%A5%E5%AD%97%E7%A4%BA%E4%BE%8B/">tcp客户端和服务端的简单实例</a>处理完一个客户端的请求就会退出，为了继续处理后续客户端的连接请求，我们需要反复的调用accept()函数。</li>
+<li>整理一下程序的基本运行方式：<ul>
+<li>服务器端在同一个时刻只能与一个客户端相互连接，并提供回声服务</li>
+<li>服务器端依次向五个客户端提供服务并退出</li>
+<li>客户端接收用户输入的字符串并发送到服务器端</li>
+<li>服务器端将接受的字符串数据传回客户端，即“回声”。</li>
+<li>服务器端与客户端之间的字符串回声一直执行到客户端输入Q为止</li>
+</ul>
+</li>
+</ul>
+<h2 id="服务器端代码简单实现"><a href="#服务器端代码简单实现" class="headerlink" title="服务器端代码简单实现"></a>服务器端代码简单实现</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;unistd.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;arpa/inet.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;sys/socket.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> BUF_SIZE 1024</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">error_handling</span><span class="params">(<span class="keyword">char</span> *message)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> *argv[])</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> serv_sock, clnt_sock;</span><br><span class="line">    <span class="keyword">char</span> message[BUF_SIZE];</span><br><span class="line">    <span class="keyword">int</span> str_len, i;</span><br><span class="line"></span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">sockaddr_in</span> <span class="title">serv_adr</span>, <span class="title">clnt_adr</span>;</span></span><br><span class="line">    <span class="keyword">socklen_t</span> clnt_adr_sz;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span>(argc != <span class="number">2</span>)&#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"Usage: %s &lt;port&gt;\n"</span>, argv[<span class="number">0</span>]);</span><br><span class="line">        <span class="built_in">exit</span>(<span class="number">1</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    serv_sock=socket(PF_INET, SOCK_STREAM, <span class="number">0</span>);</span><br><span class="line">    <span class="keyword">if</span>(serv_sock == <span class="number">-1</span>)&#123;</span><br><span class="line">        error_handling(<span class="string">"socket() error!"</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">memset</span>(&amp;serv_adr, <span class="number">0</span>, <span class="keyword">sizeof</span>(serv_adr));</span><br><span class="line">    serv_adr.sin_family = AF_INET;</span><br><span class="line">    serv_adr.sin_addr.s_addr = htonl(INADDR_ANY);</span><br><span class="line">    serv_adr.sin_port = htons(atoi(argv[<span class="number">1</span>]));</span><br><span class="line">    <span class="keyword">if</span>(bind(serv_sock, (struct sockaddr*)&amp;serv_adr, <span class="keyword">sizeof</span>(serv_adr)) == <span class="number">-1</span>) &#123;</span><br><span class="line">        error_handling(<span class="string">"bind() error!"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(listen(serv_sock, <span class="number">5</span>) == <span class="number">-1</span>)&#123;</span><br><span class="line">        error_handling(<span class="string">"listen() error!"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    clnt_adr_sz = <span class="keyword">sizeof</span>(clnt_adr);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span>(i = <span class="number">0</span>; i &lt; <span class="number">5</span>; i++)&#123;</span><br><span class="line">        clnt_sock = accept(serv_sock, (struct sockaddr*)&amp;clnt_adr, &amp;clnt_adr_sz);</span><br><span class="line">        <span class="keyword">if</span>(clnt_sock == <span class="number">-1</span>)&#123;</span><br><span class="line">            error_handling(<span class="string">"accept() error!"</span>);</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">"Conneted client %d"</span>, i + <span class="number">1</span>);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">while</span>((str_len = read(clnt_sock, message, BUF_SIZE)) != <span class="number">0</span>)&#123;</span><br><span class="line">            write(clnt_sock, message, str_len);</span><br><span class="line">        &#125;</span><br><span class="line">        close(clnt_sock);</span><br><span class="line">    &#125;</span><br><span class="line">    close(serv_sock);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">error_handling</span><span class="params">(<span class="keyword">char</span> *message)</span></span>&#123;</span><br><span class="line">    <span class="built_in">fputs</span>(message, <span class="built_in">stderr</span>);</span><br><span class="line">    fputc(<span class="string">'\n'</span>, <span class="built_in">stderr</span>);</span><br><span class="line">    <span class="built_in">exit</span>(<span class="number">1</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="客户端代码简单实现"><a href="#客户端代码简单实现" class="headerlink" title="客户端代码简单实现"></a>客户端代码简单实现</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;unistd.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;arpa/inet.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;sys/socket.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> BUF_SIZE 1024</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">error_handling</span><span class="params">(<span class="keyword">char</span> *message)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> *argv[])</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> sock;</span><br><span class="line">    <span class="keyword">char</span> message[BUF_SIZE];</span><br><span class="line">    <span class="keyword">int</span> str_len;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">sockaddr_in</span> <span class="title">serv_adr</span>;</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span>(argc != <span class="number">3</span>) &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"Usage: %s &lt;IP&gt; &lt;port&gt;\n"</span>, argv[<span class="number">0</span>]);</span><br><span class="line">        <span class="built_in">exit</span>(<span class="number">1</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    sock = socket(PF_INET, SOCK_STREAM, <span class="number">0</span>);</span><br><span class="line">    serv_adr.sin_family = AF_INET;</span><br><span class="line">    serv_adr.sin_addr.s_addr = inet_addr(argv[<span class="number">1</span>]);</span><br><span class="line">    serv_adr.sin_port = htons(atoi(argv[<span class="number">2</span>]));</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span>(connect(sock, (struct sockaddr*)&amp;serv_adr, <span class="keyword">sizeof</span>(serv_adr)) == <span class="number">-1</span>)&#123;</span><br><span class="line">        error_handling(<span class="string">"connect() error!"</span>);</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="built_in">puts</span>(<span class="string">"Connected........."</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span>(<span class="number">1</span>)&#123;</span><br><span class="line">        <span class="built_in">fputs</span>(<span class="string">"Input message(Q to quit):"</span>, <span class="built_in">stdout</span>);</span><br><span class="line">        fgets(message, BUF_SIZE, <span class="built_in">stdin</span>);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span>(!<span class="built_in">strcmp</span>(message,<span class="string">"q\n"</span>) || !<span class="built_in">strcmp</span>(message,<span class="string">"Q\n"</span>))&#123;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        write(sock, message, <span class="built_in">strlen</span>(message));</span><br><span class="line">        str_len = read(sock, message, BUF_SIZE - <span class="number">1</span>);</span><br><span class="line">        message[str_len] = <span class="number">0</span>;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"Message from server: %s"</span>, message);</span><br><span class="line">    &#125;</span><br><span class="line">    close(sock);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">error_handling</span><span class="params">(<span class="keyword">char</span> *message)</span></span>&#123;</span><br><span class="line">    <span class="built_in">fputs</span>(message, <span class="built_in">stderr</span>);</span><br><span class="line">    fputc(<span class="string">'\n'</span>, <span class="built_in">stderr</span>);</span><br><span class="line">    <span class="built_in">exit</span>(<span class="number">1</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="结果图"><a href="#结果图" class="headerlink" title="结果图"></a>结果图</h2><p><img src="https://res.cloudinary.com/dswnytae9/image/upload/v1552310036/blog/linux/4.1.png" alt></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://wowgz.com.cn/2019/03/09/使用Github空间搭建Hexo博客/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1967,7 +2142,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-count">9</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
