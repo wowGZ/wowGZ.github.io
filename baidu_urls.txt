@@ -1,5 +1,5 @@
+https://wowgz.com.cn/2019/03/13/简述Markdown语法/
+https://wowgz.com.cn/2019/03/13/Markdown中书写数学公式/
 https://wowgz.com.cn/2019/03/13/博弈心理学（二）/
 https://wowgz.com.cn/2019/03/12/博弈心理学（一）/
 https://wowgz.com.cn/2019/03/12/echoV2.0/
-https://wowgz.com.cn/2019/03/12/体验定义应用层协议/
-https://wowgz.com.cn/2019/03/11/回声客户端的完美实现/
