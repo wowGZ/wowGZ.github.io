@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://wowgz.com.cn/2019/03/17/%E5%8D%9A%E5%BC%88%E5%BF%83%E7%90%86%E5%AD%A6%EF%BC%88%E4%B8%89%EF%BC%89/</loc>
+    <lastmod>2019-03-17</lastmod>
+  </url>  <url>
     <loc>https://wowgz.com.cn/2019/03/17/JSP%E5%8A%A8%E4%BD%9C/</loc>
     <lastmod>2019-03-17</lastmod>
   </url>  <url>
@@ -51,8 +54,5 @@
   </url>  <url>
     <loc>https://wowgz.com.cn/2019/03/03/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B9%8B%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F-%E5%B7%A5%E5%8E%82%E6%96%B9%E6%B3%95%E6%A8%A1%E5%BC%8F/</loc>
     <lastmod>2019-03-04</lastmod>
-  </url>  <url>
-    <loc>https://wowgz.com.cn/2019/03/01/hello-world/</loc>
-    <lastmod>2019-03-01</lastmod>
   </url>
 </urlset>
