@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="WowGz">
+  <meta name="keywords" content="Java Web,Java,">
 
 
 
@@ -79,20 +79,18 @@
 
 
 
-<meta name="description" content="title: ServletListener详解category:  学习笔记tags:  java java web   ServletListener详解在 Servlet API 中有一个 ServletContextListener 接口，它能够监听 ServletContext 对象的生命周期，实际上就是监听 Web 应用的生命周期。 　　当Servlet 容器启动或终止Web 应用时">
+<meta name="description" content="ServletListener详解在 Servlet API 中有一个 ServletContextListener 接口，它能够监听 ServletContext 对象的生命周期，实际上就是监听 Web 应用的生命周期。 　　当Servlet 容器启动或终止Web 应用时，会触发ServletContextEvent 事件，该事件由ServletContextListener 来处理。在 Ser">
+<meta name="keywords" content="Java Web,Java">
 <meta property="og:type" content="article">
-<meta property="og:title" content="WowGz">
+<meta property="og:title" content="ServletListener详解">
 <meta property="og:url" content="https://wowgz.com.cn/2019/09/23/ServletListener详解/index.html">
 <meta property="og:site_name" content="WowGz">
-<meta property="og:description" content="title: ServletListener详解category:  学习笔记tags:  java java web   ServletListener详解在 Servlet API 中有一个 ServletContextListener 接口，它能够监听 ServletContext 对象的生命周期，实际上就是监听 Web 应用的生命周期。 　　当Servlet 容器启动或终止Web 应用时">
+<meta property="og:description" content="ServletListener详解在 Servlet API 中有一个 ServletContextListener 接口，它能够监听 ServletContext 对象的生命周期，实际上就是监听 Web 应用的生命周期。 　　当Servlet 容器启动或终止Web 应用时，会触发ServletContextEvent 事件，该事件由ServletContextListener 来处理。在 Ser">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://common.cnblogs.com/images/copycode.gif">
-<meta property="og:image" content="https://common.cnblogs.com/images/copycode.gif">
-<meta property="og:updated_time" content="2019-09-23T03:00:51.238Z">
+<meta property="og:updated_time" content="2019-09-23T03:15:36.511Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="WowGz">
-<meta name="twitter:description" content="title: ServletListener详解category:  学习笔记tags:  java java web   ServletListener详解在 Servlet API 中有一个 ServletContextListener 接口，它能够监听 ServletContext 对象的生命周期，实际上就是监听 Web 应用的生命周期。 　　当Servlet 容器启动或终止Web 应用时">
-<meta name="twitter:image" content="https://common.cnblogs.com/images/copycode.gif">
+<meta name="twitter:title" content="ServletListener详解">
+<meta name="twitter:description" content="ServletListener详解在 Servlet API 中有一个 ServletContextListener 接口，它能够监听 ServletContext 对象的生命周期，实际上就是监听 Web 应用的生命周期。 　　当Servlet 容器启动或终止Web 应用时，会触发ServletContextEvent 事件，该事件由ServletContextListener 来处理。在 Ser">
 
 
 
@@ -128,7 +126,7 @@
 
 
 
-  <title> | WowGz</title>
+  <title>ServletListener详解 | WowGz</title>
   
 
 
@@ -278,7 +276,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline"></h1>
+          <h1 class="post-title" itemprop="name headline">ServletListener详解</h1>
         
 
         <div class="post-meta">
@@ -301,6 +299,28 @@
           </span>
 
           
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/学习笔记/" itemprop="url" rel="index">
+                    <span itemprop="name">学习笔记</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -318,7 +338,7 @@
 
           
           
-             <span id="/2019/09/23/ServletListener详解/" class="leancloud_visitors" data-flag-title>
+             <span id="/2019/09/23/ServletListener详解/" class="leancloud_visitors" data-flag-title="ServletListener详解">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -348,15 +368,7 @@
       
 
       
-        <hr>
-<p>title: ServletListener详解<br>category:</p>
-<ul>
-<li>学习笔记<br>tags: </li>
-<li>java</li>
-<li>java web</li>
-</ul>
-<hr>
-<h1 id="ServletListener详解"><a href="#ServletListener详解" class="headerlink" title="ServletListener详解"></a>ServletListener详解</h1><p>在 Servlet API 中有一个 ServletContextListener 接口，它能够监听 ServletContext 对象的生命周期，实际上就是监听 Web 应用的生命周期。</p>
+        <h1 id="ServletListener详解"><a href="#ServletListener详解" class="headerlink" title="ServletListener详解"></a>ServletListener详解</h1><p>在 Servlet API 中有一个 ServletContextListener 接口，它能够监听 ServletContext 对象的生命周期，实际上就是监听 Web 应用的生命周期。</p>
 <p>　　当Servlet 容器启动或终止Web 应用时，会触发ServletContextEvent 事件，该事件由ServletContextListener 来处理。在 ServletContextListener 接口中定义了处理ServletContextEvent 事件的两个方法。</p>
 <p>java代码</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"> 1 /**</span><br><span class="line"> 2  * 当Servlet 容器启动Web 应用时调用该方法。在调用完该方法之后，容器再对Filter 初始化，</span><br><span class="line"> 3  * 并且对那些在Web 应用启动时就需要被初始化的Servlet 进行初始化。</span><br><span class="line"> 4  */</span><br><span class="line"> 5 contextInitialized(ServletContextEvent sce) </span><br><span class="line"> 6 </span><br><span class="line"> 7 </span><br><span class="line"> 8 /**</span><br><span class="line"> 9  * 当Servlet 容器终止Web 应用时调用该方法。在调用该方法之前，容器会先销毁所有的Servlet 和Filter 过滤器。</span><br><span class="line">10  */</span><br><span class="line">11 contextDestroyed(ServletContextEvent sce)</span><br></pre></td></tr></table></figure>
@@ -381,7 +393,6 @@
 <p>1 、在 Web 应用启动时从文件中读取计数器的数值，并把表示计数器的 Counter 对象存放到 Web应用范围内。存放计数器的文件的路径为helloapp/count/count.txt 。</p>
 <p>2 、在Web 应用终止时把Web 应用范围内的计数器的数值保存到count.txt 文件中。</p>
 <p>Java代码</p>
-<p><img src="https://common.cnblogs.com/images/copycode.gif" alt="复制代码"></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br></pre></td><td class="code"><pre><span class="line"> 1 public class MyServletContextListener implements ServletContextListener&#123;</span><br><span class="line"> 2 </span><br><span class="line"> 3   public void contextInitialized(ServletContextEvent sce)&#123;</span><br><span class="line"> 4 </span><br><span class="line"> 5     System.out.println(&quot;helloapp application is Initialized.&quot;);</span><br><span class="line"> 6 </span><br><span class="line"> 7     // 获取 ServletContext 对象</span><br><span class="line"> 8 </span><br><span class="line"> 9     ServletContext context=sce.getServletContext();</span><br><span class="line">10 </span><br><span class="line">11     try&#123;</span><br><span class="line">12 </span><br><span class="line">13        // 从文件中读取计数器的数值</span><br><span class="line">14 </span><br><span class="line">15        BufferedReader reader=new BufferedReader(</span><br><span class="line">16 </span><br><span class="line">17            new InputStreamReader(context.</span><br><span class="line">18 </span><br><span class="line">19            getResourceAsStream(&quot;/count/count.txt&quot;)));</span><br><span class="line">20 </span><br><span class="line">21        int count=Integer.parseInt(reader.readLine());</span><br><span class="line">22 </span><br><span class="line">23        reader.close();</span><br><span class="line">24 </span><br><span class="line">25        // 创建计数器对象</span><br><span class="line">26 </span><br><span class="line">27        Counter counter=new Counter(count);</span><br><span class="line">28 </span><br><span class="line">29        // 把计数器对象保存到 Web 应用范围</span><br><span class="line">30 </span><br><span class="line">31        context.setAttribute(&quot;counter&quot;,counter);</span><br><span class="line">32 </span><br><span class="line">33        &#125; catch(IOException e) &#123;</span><br><span class="line">34 </span><br><span class="line">35           e.printStackTrace();</span><br><span class="line">36 </span><br><span class="line">37        &#125;</span><br><span class="line">38 </span><br><span class="line">39    &#125;</span><br><span class="line">40 </span><br><span class="line">41    public void contextDestroyed(ServletContextEvent sce)&#123;</span><br><span class="line">42 </span><br><span class="line">43        System.out.println(&quot;helloapp application is Destroyed.&quot;);</span><br><span class="line">44 </span><br><span class="line">45        // 获取 ServletContext 对象</span><br><span class="line">46 </span><br><span class="line">47        ServletContext context=sce.getServletContext();</span><br><span class="line">48 </span><br><span class="line">49        // 从 Web 应用范围获得计数器对象</span><br><span class="line">50 </span><br><span class="line">51        Counter counter=(Counter)context.getAttribute(&quot;counter&quot;);</span><br><span class="line">52 </span><br><span class="line">53        if(counter!=null)&#123;</span><br><span class="line">54 </span><br><span class="line">55        try&#123;</span><br><span class="line">56 </span><br><span class="line">57           // 把计数器的数值写到 count.txt 文件中</span><br><span class="line">58 </span><br><span class="line">59           String filepath=context.getRealPath(&quot;/count&quot;);</span><br><span class="line">60 </span><br><span class="line">61           filepath=filepath+&quot;/count.txt&quot;;</span><br><span class="line">62 </span><br><span class="line">63           PrintWriter pw=new PrintWriter(filepath);</span><br><span class="line">64 </span><br><span class="line">65           pw.println(counter.getCount());</span><br><span class="line">66 </span><br><span class="line">67           pw.close();</span><br><span class="line">68 </span><br><span class="line">69          &#125; catch(IOException e) &#123;</span><br><span class="line">70 </span><br><span class="line">71              e.printStackTrace();</span><br><span class="line">72 </span><br><span class="line">73          &#125;</span><br><span class="line">74 </span><br><span class="line">75      &#125;</span><br><span class="line">76 </span><br><span class="line">77    &#125;</span><br><span class="line">78 </span><br><span class="line">79 &#125;</span><br></pre></td></tr></table></figure>
 <p>将用户自定义的 MyServletContextListener 监听器在 Servlet 容器进行注册， Servlet 容器会在启动或终止 Web 应用时，会调用该监听器的相关方法。在 web.xml 文件中， <listener> 元素用于向容器注册监听器：</listener></p>
 <p>Xml代码</p>
@@ -392,7 +403,6 @@
 <p>当Web 应用终止时，Servlet 容器先调用lifeInit 的destroy() 方法，再调用contextDestroyed() 方法。</p>
 <p>由此可见，在Web 应用的生命周期中，ServletContext 对象最早被创建，最晚被销毁。</p>
 <p>例三：启动线程</p>
-<p><img src="https://common.cnblogs.com/images/copycode.gif" alt="复制代码"></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br></pre></td><td class="code"><pre><span class="line"> 1 public class DSAction extends Thread implements ServletContextListener &#123;</span><br><span class="line"> 2 </span><br><span class="line"> 3     public void contextInitialized(ServletContextEvent arg0) &#123;</span><br><span class="line"> 4         </span><br><span class="line"> 5         super.start();// 启动一个线程</span><br><span class="line"> 6     &#125;</span><br><span class="line"> 7     public void zdfs() throws IOException &#123;</span><br><span class="line"> 8 </span><br><span class="line"> 9         Huoquzhuye u = new Huoquzhuye();// 爬虫方法类</span><br><span class="line">10         Htmlneirong h = new Htmlneirong();// 存入数据库类</span><br><span class="line">11         List&lt;String&gt; list = u.seturl(&quot;http://xxxxxxx&quot;);</span><br><span class="line">12         for (int i = 0; i &lt; list.size(); i++) &#123;</span><br><span class="line">13             String txt = list.get(i).substring(0, 22);</span><br><span class="line">14             String start = list.get(i).substring(4, 14);</span><br><span class="line">15             String end = list.get(i).substring(22, list.get(i).length());</span><br><span class="line">16             try &#123;</span><br><span class="line">17                 h.seturl(txt, start, end);</span><br><span class="line">18             &#125; catch (ClassNotFoundException e) &#123;</span><br><span class="line">19                 // TODO Auto-generated catch block</span><br><span class="line">20                 e.printStackTrace();</span><br><span class="line">21             &#125; catch (SQLException e) &#123;</span><br><span class="line">22 </span><br><span class="line">23                 e.printStackTrace();</span><br><span class="line">24             &#125;</span><br><span class="line">25         &#125;</span><br><span class="line">26 </span><br><span class="line">27     &#125;</span><br><span class="line">28 </span><br><span class="line">29     @Override</span><br><span class="line">30     public void run() &#123;</span><br><span class="line">31         while (true) &#123;</span><br><span class="line">32             try &#123;</span><br><span class="line">33                 this.zdfs();</span><br><span class="line">34                 super.sleep(1000 * 60 * 10);</span><br><span class="line">35             &#125; catch (IOException e) &#123;</span><br><span class="line">36                 // TODO Auto-generated catch block</span><br><span class="line">37                 e.printStackTrace();</span><br><span class="line">38             &#125; catch (InterruptedException e) &#123;</span><br><span class="line">39                 // TODO Auto-generated catch block</span><br><span class="line">40                 e.printStackTrace();</span><br><span class="line">41             &#125;</span><br><span class="line">42         &#125;</span><br><span class="line">43     &#125;</span><br><span class="line">44 </span><br><span class="line">45     /*</span><br><span class="line">46      * (non-Javadoc)</span><br><span class="line">47      * </span><br><span class="line">48      * @see javax.servlet.ServletContextListener#contextDestroyed(javax.servlet.</span><br><span class="line">49      * ServletContextEvent)</span><br><span class="line">50      */</span><br><span class="line">51 </span><br><span class="line">52 </span><br><span class="line">53     /*</span><br><span class="line">54      * (non-Javadoc)</span><br><span class="line">55      * </span><br><span class="line">56      * @see</span><br><span class="line">57      * javax.servlet.ServletContextListener#contextInitialized(javax.servlet</span><br><span class="line">58      * .ServletContextEvent)</span><br><span class="line">59      */</span><br><span class="line">60 </span><br><span class="line">61     public void contextDestroyed(ServletContextEvent arg0) &#123;</span><br><span class="line">62         super.stop();// 停止线程</span><br><span class="line">63 </span><br><span class="line">64     &#125;</span><br><span class="line">65 &#125;</span><br></pre></td></tr></table></figure>
 <p>web.xml</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1  &lt;listener&gt;</span><br><span class="line">2   &lt;listener-class&gt;bj.hbj.dingshi.DSAction&lt;/listener-class&gt;</span><br><span class="line">3 &lt;/listener&gt;</span><br></pre></td></tr></table></figure>
@@ -441,6 +451,14 @@
     
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Java-Web/" rel="tag"># Java Web</a>
+          
+            <a href="/tags/Java/" rel="tag"># Java</a>
+          
+        </div>
       
 
       
