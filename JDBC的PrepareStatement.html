@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="wowgz">
+  <meta name="keywords" content="Java,JDBC,">
 
 
 
@@ -79,14 +79,18 @@
 
 
 
+<meta name="description" content="JDBC中PrepareStatement接口提供的execute、executeQuery和executeUpdate之间的区别及用法三种方法的区别 PreparedStatement接口提供了三种执行 SQL 语句的方法：executeQuery、executeUpdate 和 execute。使用哪一个方法由 SQL 语句所产生的内容决定。  executeQuery（）方法： 用于产生单个">
+<meta name="keywords" content="Java,JDBC">
 <meta property="og:type" content="article">
-<meta property="og:title" content="WowGz">
+<meta property="og:title" content="JDBC PrepareStatement中的接口提供的execute、executeQuery和executeUpdate之间的区别及用法">
 <meta property="og:url" content="https://wowgz.com.cn/JDBC的PrepareStatement.html">
 <meta property="og:site_name" content="WowGz">
+<meta property="og:description" content="JDBC中PrepareStatement接口提供的execute、executeQuery和executeUpdate之间的区别及用法三种方法的区别 PreparedStatement接口提供了三种执行 SQL 语句的方法：executeQuery、executeUpdate 和 execute。使用哪一个方法由 SQL 语句所产生的内容决定。  executeQuery（）方法： 用于产生单个">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-10-29T12:56:16.449Z">
+<meta property="og:updated_time" content="2019-10-29T13:22:30.291Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="WowGz">
+<meta name="twitter:title" content="JDBC PrepareStatement中的接口提供的execute、executeQuery和executeUpdate之间的区别及用法">
+<meta name="twitter:description" content="JDBC中PrepareStatement接口提供的execute、executeQuery和executeUpdate之间的区别及用法三种方法的区别 PreparedStatement接口提供了三种执行 SQL 语句的方法：executeQuery、executeUpdate 和 execute。使用哪一个方法由 SQL 语句所产生的内容决定。  executeQuery（）方法： 用于产生单个">
 
 
 
@@ -122,7 +126,7 @@
 
 
 
-  <title> | WowGz</title>
+  <title>JDBC PrepareStatement中的接口提供的execute、executeQuery和executeUpdate之间的区别及用法 | WowGz</title>
   
 
 
@@ -272,7 +276,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline"></h2>
+          <h2 class="post-title" itemprop="name headline">JDBC PrepareStatement中的接口提供的execute、executeQuery和executeUpdate之间的区别及用法</h2>
         
 
         <div class="post-meta">
@@ -295,6 +299,28 @@
           </span>
 
           
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/学习笔记/" itemprop="url" rel="index">
+                    <span itemprop="name">学习笔记</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -312,7 +338,7 @@
 
           
           
-             <span id="/JDBC的PrepareStatement.html" class="leancloud_visitors" data-flag-title>
+             <span id="/JDBC的PrepareStatement.html" class="leancloud_visitors" data-flag-title="JDBC PrepareStatement中的接口提供的execute、executeQuery和executeUpdate之间的区别及用法">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -342,7 +368,23 @@
       
 
       
-        
+        <h1 id="JDBC中PrepareStatement接口提供的execute、executeQuery和executeUpdate之间的区别及用法"><a href="#JDBC中PrepareStatement接口提供的execute、executeQuery和executeUpdate之间的区别及用法" class="headerlink" title="JDBC中PrepareStatement接口提供的execute、executeQuery和executeUpdate之间的区别及用法"></a>JDBC中PrepareStatement接口提供的execute、executeQuery和executeUpdate之间的区别及用法</h1><h2 id="三种方法的区别"><a href="#三种方法的区别" class="headerlink" title="三种方法的区别"></a>三种方法的区别</h2><p> PreparedStatement接口提供了三种执行 SQL 语句的方法：executeQuery、executeUpdate 和 execute。使用哪一个方法由 SQL 语句所产生的内容决定。</p>
+<ol>
+<li><p><strong>executeQuery（）方法：</strong></p>
+<pre><code>用于产生单个结果集的语句，例如 SELECT 语句。 被使用最多的执行 SQL 语句的方法是 executeQuery。这个方法被用来执行 SELECT 语句，它几乎是使用最多的 SQL 语句。
+</code></pre></li>
+<li><p><strong>executeUpdate（）方法：</strong></p>
+<pre><code>用于执行 INSERT、UPDATE 或 DELETE 语句以及 SQL DDL（数据定义语言）语句，例如 CREATE TABLE 和 DROP TABLE。INSERT、UPDATE 或 DELETE 语句的效果是修改表中零行或多行中的一列或多列。executeUpdate 的返回值是一个整数，指示受影响的行数（即更新计数）。对于 CREATE TABLE 或 DROP TABLE 等不操作行的语句，executeUpdate 的返回值总为零。使用executeUpdate方法是因为在 createTableCoffees 中的 SQL 语句是 DDL （数据定义语言）语句。创建表，改变表，删除表都是 DDL 语句的例子，要用 executeUpdate 方法来执行。你也可以从它的名字里看出，方法 executeUpdate 也被用于执行更新表 SQL 语句。实际上，相对于创建表来说，executeUpdate 用于更新表的时间更多，因为表只需要创建一次，但经常被更新。
+</code></pre></li>
+<li><p><strong>execute（）方法：</strong></p>
+<pre><code>用于执行返回多个结果集、多个更新计数或二者组合的语句。也可用于执行 INSERT、UPDATE 或 DELETE 语句。
+</code></pre></li>
+</ol>
+<h2 id="用法举例"><a href="#用法举例" class="headerlink" title="用法举例"></a>用法举例</h2><h3 id="1、增加、修改、删除都用execute-，也可用executeUpdate-，针对于INSERT、UPDATE-或-DELETE-语句"><a href="#1、增加、修改、删除都用execute-，也可用executeUpdate-，针对于INSERT、UPDATE-或-DELETE-语句" class="headerlink" title="1、增加、修改、删除都用execute()，也可用executeUpdate()，针对于INSERT、UPDATE 或 DELETE 语句"></a>1、增加、修改、删除都用execute()，也可用executeUpdate()，针对于INSERT、UPDATE 或 DELETE 语句</h3><p>代码如下：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">addAirEnvironmentPresent</span><span class="params">(M_AirEnviromentPresentDTO airDTO)</span></span>&#123;</span><br><span class="line">  <span class="keyword">int</span> index = <span class="number">1</span>;</span><br><span class="line">  String sql = <span class="string">"insert into airPresent(airForecastPlace,ForecastTime,TSPvalue,remark) values(?,?,?,?)"</span>;</span><br><span class="line">  <span class="keyword">try</span> &#123;</span><br><span class="line">   ps = conn.prepareStatement(sql);</span><br><span class="line">   ps.setString(index++, airDTO.getAirForecastPlace());</span><br><span class="line">   ps.setString(index++, airDTO.getForecastTime());</span><br><span class="line">   ps.setString(index++, airDTO.getTSPvalue());</span><br><span class="line">   ps.setString(index++, airDTO.getRemark());</span><br><span class="line">   ps.execute();</span><br><span class="line"></span><br><span class="line">  &#125; <span class="keyword">catch</span> (SQLException e) &#123;</span><br><span class="line">   e.printStackTrace();</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+<h3 id="2、查询调用executeQuery-，针对于SELECT语句"><a href="#2、查询调用executeQuery-，针对于SELECT语句" class="headerlink" title="2、查询调用executeQuery()，针对于SELECT语句"></a>2、查询调用executeQuery()，针对于SELECT语句</h3><p>代码如下：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> ArrayList <span class="title">getAirEnvironmentPresentAll</span><span class="params">()</span></span>&#123;</span><br><span class="line">  ArrayList list = <span class="keyword">new</span> ArrayList();</span><br><span class="line">  String sql = <span class="string">"select * from airPresent"</span>;</span><br><span class="line">  <span class="keyword">try</span> &#123;</span><br><span class="line">   ps = conn.prepareStatement(sql);</span><br><span class="line">   rs = ps.executeQuery();</span><br><span class="line">   <span class="keyword">while</span>(rs.next())&#123;</span><br><span class="line">    dto = <span class="keyword">new</span> M_AirEnviromentPresentDTO();</span><br><span class="line">    dto.setId(rs.getInt(<span class="string">"id"</span>));</span><br><span class="line">    dto.setAirForecastPlace(rs.getString(<span class="string">"airForecastPlace"</span>));</span><br><span class="line">    dto.setForecastTime(rs.getString(<span class="string">"forecastTime"</span>));</span><br><span class="line">    dto.setTSPvalue(rs.getString(<span class="string">"tspvalue"</span>));</span><br><span class="line">    dto.setRemark(rs.getString(<span class="string">"remark"</span>));</span><br><span class="line">    list.add(dto);</span><br><span class="line">   &#125;</span><br><span class="line">  &#125; <span class="keyword">catch</span> (SQLException e) &#123;</span><br><span class="line">   e.printStackTrace();</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> list;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+
       
     </div>
     
@@ -385,6 +427,14 @@
     
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Java/" rel="tag"># Java</a>
+          
+            <a href="/tags/JDBC/" rel="tag"># JDBC</a>
+          
+        </div>
       
 
       
@@ -458,8 +508,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -498,7 +557,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">15</span>
+                  <span class="site-state-item-count">16</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -537,6 +596,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#JDBC中PrepareStatement接口提供的execute、executeQuery和executeUpdate之间的区别及用法"><span class="nav-number">1.</span> <span class="nav-text">JDBC中PrepareStatement接口提供的execute、executeQuery和executeUpdate之间的区别及用法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#三种方法的区别"><span class="nav-number">1.1.</span> <span class="nav-text">三种方法的区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#用法举例"><span class="nav-number">1.2.</span> <span class="nav-text">用法举例</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1、增加、修改、删除都用execute-，也可用executeUpdate-，针对于INSERT、UPDATE-或-DELETE-语句"><span class="nav-number">1.2.1.</span> <span class="nav-text">1、增加、修改、删除都用execute()，也可用executeUpdate()，针对于INSERT、UPDATE 或 DELETE 语句</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2、查询调用executeQuery-，针对于SELECT语句"><span class="nav-number">1.2.2.</span> <span class="nav-text">2、查询调用executeQuery()，针对于SELECT语句</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
