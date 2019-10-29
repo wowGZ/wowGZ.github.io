@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="wowgz">
+  <meta name="keywords" content="Java,">
 
 
 
@@ -79,14 +79,18 @@
 
 
 
+<meta name="description" content="Java中&amp;amp;&amp;amp;和&amp;amp;的区别Java中&amp;amp;&amp;amp;和&amp;amp;都是表示与的逻辑运算符，都表示逻辑运输符and，当两边的表达式都为true的时候，整个运算结果才为true，否则为false。 区别在于：  &amp;amp;&amp;amp;具有短路功能，当第一个表达式为false的时候，后续的表达式并不进行计算和判断 123456public class test &amp;#123;">
+<meta name="keywords" content="Java">
 <meta property="og:type" content="article">
-<meta property="og:title" content="WowGz">
+<meta property="og:title" content="Java中&amp;&amp;和&amp;的区别">
 <meta property="og:url" content="https://wowgz.com.cn/Java中逻辑运算符.html">
 <meta property="og:site_name" content="WowGz">
+<meta property="og:description" content="Java中&amp;amp;&amp;amp;和&amp;amp;的区别Java中&amp;amp;&amp;amp;和&amp;amp;都是表示与的逻辑运算符，都表示逻辑运输符and，当两边的表达式都为true的时候，整个运算结果才为true，否则为false。 区别在于：  &amp;amp;&amp;amp;具有短路功能，当第一个表达式为false的时候，后续的表达式并不进行计算和判断 123456public class test &amp;#123;">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-10-29T13:38:35.504Z">
+<meta property="og:updated_time" content="2019-10-29T13:46:31.512Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="WowGz">
+<meta name="twitter:title" content="Java中&amp;&amp;和&amp;的区别">
+<meta name="twitter:description" content="Java中&amp;amp;&amp;amp;和&amp;amp;的区别Java中&amp;amp;&amp;amp;和&amp;amp;都是表示与的逻辑运算符，都表示逻辑运输符and，当两边的表达式都为true的时候，整个运算结果才为true，否则为false。 区别在于：  &amp;amp;&amp;amp;具有短路功能，当第一个表达式为false的时候，后续的表达式并不进行计算和判断 123456public class test &amp;#123;">
 
 
 
@@ -122,7 +126,7 @@
 
 
 
-  <title> | WowGz</title>
+  <title>Java中&&和&的区别 | WowGz</title>
   
 
 
@@ -272,7 +276,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline"></h2>
+          <h2 class="post-title" itemprop="name headline">Java中&&和&的区别</h2>
         
 
         <div class="post-meta">
@@ -295,6 +299,28 @@
           </span>
 
           
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/学习笔记/" itemprop="url" rel="index">
+                    <span itemprop="name">学习笔记</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -312,7 +338,7 @@
 
           
           
-             <span id="/Java中逻辑运算符.html" class="leancloud_visitors" data-flag-title>
+             <span id="/Java中逻辑运算符.html" class="leancloud_visitors" data-flag-title="Java中&&和&的区别">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -342,7 +368,17 @@
       
 
       
-        
+        <h1 id="Java中-amp-amp-和-amp-的区别"><a href="#Java中-amp-amp-和-amp-的区别" class="headerlink" title="Java中&amp;&amp;和&amp;的区别"></a>Java中&amp;&amp;和&amp;的区别</h1><p>Java中&amp;&amp;和&amp;都是表示与的逻辑运算符，都表示逻辑运输符and，当两边的表达式都为true的时候，整个运算结果才为true，否则为false。</p>
+<p>区别在于：</p>
+<ol>
+<li><p>&amp;&amp;具有<strong>短路功能</strong>，当第一个表达式为false的时候，后续的表达式并不进行计算和判断</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">test</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">boolean</span> flag = <span class="number">10</span>%<span class="number">2</span> == <span class="number">1</span> &amp;&amp; <span class="number">10</span> / <span class="number">3</span> == <span class="number">0</span> &amp;&amp; <span class="number">1</span> / <span class="number">0</span> == <span class="number">0</span> ;<span class="comment">//注意：因为短路功能的存在，最后一项并不进行计算，所以不存在报错的情况出现</span></span><br><span class="line">        System.out.println(flag ? <span class="string">"mldn"</span> : <span class="string">"yootk"</span>) ;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<ol start="2">
+<li>&amp;可以作为<strong>位运算符</strong>使用， 当&amp;两边的表达式不为<em>boolean</em>类型的时候会被作为位运算符进行计算</li>
+</ol>
+
       
     </div>
     
@@ -385,6 +421,12 @@
     
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Java/" rel="tag"># Java</a>
+          
+        </div>
       
 
       
@@ -458,8 +500,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -537,6 +588,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Java中-amp-amp-和-amp-的区别"><span class="nav-number">1.</span> <span class="nav-text">Java中&amp;&amp;和&amp;的区别</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
