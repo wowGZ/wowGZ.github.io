@@ -11,5 +11,5 @@ Disallow: /fonts/
 Disallow: /vendors/
 Disallow: /fancybox/
 
-Sitemap: https://abner0101.github.io/sitemap.xml
-Sitemap: https://abner0101.github.io/baidusitemap.xml
+Sitemap: https://wowgz.com.cn/sitemap.xml
+Sitemap: https://wowgz.com.cn/baidusitemap.xml
