@@ -1,0 +1,1118 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Python,">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="Python数据类型 数据类型：指的就是变量的值的类型，也就是可以为变量赋哪些值  数值 在Python中数值分为三种 整数 浮点数 复数    整数 在Python中所有的整数均为int类型 Python中的整数没有大小的限制，不会出现溢出，故可以出现无限大的数 如果数字的长度过大，可以使用下划线进行分割，输出结果并不发生改变 其他进制的整数（只要是数字，在以print()进行打印的时候，均已十">
+<meta name="keywords" content="Python">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Python数据类型">
+<meta property="og:url" content="https://wowgz.com.cn/20191230_3.html">
+<meta property="og:site_name" content="WowGz">
+<meta property="og:description" content="Python数据类型 数据类型：指的就是变量的值的类型，也就是可以为变量赋哪些值  数值 在Python中数值分为三种 整数 浮点数 复数    整数 在Python中所有的整数均为int类型 Python中的整数没有大小的限制，不会出现溢出，故可以出现无限大的数 如果数字的长度过大，可以使用下划线进行分割，输出结果并不发生改变 其他进制的整数（只要是数字，在以print()进行打印的时候，均已十">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-12-30T08:52:29.397Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Python数据类型">
+<meta name="twitter:description" content="Python数据类型 数据类型：指的就是变量的值的类型，也就是可以为变量赋哪些值  数值 在Python中数值分为三种 整数 浮点数 复数    整数 在Python中所有的整数均为int类型 Python中的整数没有大小的限制，不会出现溢出，故可以出现无限大的数 如果数字的长度过大，可以使用下划线进行分割，输出结果并不发生改变 其他进制的整数（只要是数字，在以print()进行打印的时候，均已十">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"hide","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://wowgz.com.cn/20191230_3.html">
+
+
+
+
+
+  <title>Python数据类型 | WowGz</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">WowGz</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description"></h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+
+
+<script language="javascript">
+  host = window.location.host
+  if(host == "wowgz.coding.me")
+      window.location.href = window.location.href.replace(/wowgz.coding.me/,"wowgz.com.cn")
+</script> </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://wowgz.com.cn/20191230_3.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Guo Zhen">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="WowGz">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">Python数据类型</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-12-30T16:52:49+08:00">
+                2019-12-30
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Python入门笔记/" itemprop="url" rel="index">
+                    <span itemprop="name">Python入门笔记</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/20191230_3.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/20191230_3.html" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/20191230_3.html" class="leancloud_visitors" data-flag-title="Python数据类型">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="Python数据类型"><a href="#Python数据类型" class="headerlink" title="Python数据类型"></a>Python数据类型</h1><ul>
+<li><strong>数据类型</strong>：指的就是变量的值的类型，也就是可以为变量赋哪些值</li>
+</ul>
+<h2 id="数值"><a href="#数值" class="headerlink" title="数值"></a>数值</h2><ul>
+<li>在Python中数值分为三种<ul>
+<li>整数</li>
+<li>浮点数</li>
+<li>复数</li>
+</ul>
+</li>
+</ul>
+<h3 id="整数"><a href="#整数" class="headerlink" title="整数"></a>整数</h3><ul>
+<li>在Python中所有的整数均为int类型</li>
+<li>Python中的整数没有大小的限制，不会出现溢出，故可以出现无限大的数</li>
+<li>如果数字的长度过大，可以使用下划线进行分割，输出结果并不发生改变</li>
+<li><p>其他进制的整数（只要是数字，在以print()进行打印的时候，均已十进制形式进行输出）</p>
+<ul>
+<li>二进制：以<code>0b</code>开头</li>
+<li>八进制：以<code>0o</code>开头</li>
+<li>十六进制：以<code>0x</code>开头</li>
+</ul>
+</li>
+<li><p>可以通过运算符来对数字进行运算，并且可以保证整数运算的精确性</p>
+</li>
+</ul>
+<h3 id="浮点数（小数）"><a href="#浮点数（小数）" class="headerlink" title="浮点数（小数）"></a>浮点数（小数）</h3><ul>
+<li>在Python中，所有的小数都是浮点类型（<code>float</code>）</li>
+<li>对浮点数进行运算的时候，可能会得到一个不精确的数</li>
+</ul>
+<h2 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h2><ul>
+<li>用来表示一段文本信息，是程序中使用最多的数据类型</li>
+<li>在Python中使用字符串需要使用<code>&#39;&#39;</code>或者<code>&quot;&quot;</code>括起来（但是不能将两种引号混合使用），如果不括起来，则会被认为是变量而非字符串</li>
+<li>相同引号之间不能够进行嵌套，使用不同的引号来进行嵌套一次实现某一些特殊需要</li>
+<li>单引号和双引号不能够进行跨行使用</li>
+<li>可以使用三重引号（三个单引号后者三个双引号均可），会保留文本之中的格式，比如回车换行等缩进都会进行保留</li>
+</ul>
+<h3 id="转义字符"><a href="#转义字符" class="headerlink" title="转义字符"></a>转义字符</h3><p><code>\</code>转义字符，和平时一样的使用方法，在字符串中使用一些特殊的内容</p>
+<h3 id="格式化字符串"><a href="#格式化字符串" class="headerlink" title="格式化字符串"></a>格式化字符串</h3><ul>
+<li>字符串相加：即字符串进行拼接</li>
+<li><strong>字符串不能够和其他数据类型进行拼接</strong></li>
+</ul>
+<ol>
+<li><p>可以通过为print()函数传递多个参数，来实现字符串的拼接以及打印结果的格式规范</p>
+</li>
+<li><p>在创建字符串的时候，可以在字符串中指定占位符</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># %s在此处即占位符，表示的是任一字符串，同C语言相似，在输出的字符串中，使用占位符进行特殊数据类型的输出</span></span><br><span class="line"><span class="comment"># 在''外面在使用%'孙悟空'即为，为字符串中的占位符所在位置进行赋值操作</span></span><br><span class="line"><span class="comment"># %3.5s则为最少三位最多五位的字符串</span></span><br><span class="line">b = <span class="string">'Hello %s'</span> % <span class="string">'孙悟空'</span></span><br><span class="line">print(b)</span><br><span class="line">b = <span class="string">'Hello %s 你好 %s'</span> % (<span class="string">'Tom'</span>,<span class="string">'孙悟空'</span>)</span><br><span class="line">print(b)</span><br><span class="line"><span class="comment"># 输出结果如下</span></span><br><span class="line"><span class="comment"># Hello 孙悟空</span></span><br><span class="line"><span class="comment"># Hello Tom 你好 孙悟空</span></span><br><span class="line"><span class="comment"># </span></span><br><span class="line"><span class="comment">#***Repl Closed***</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>格式化字符串：可以通过在字符串前添加一个<code>f</code>来创建一个格式化字符串，在格式化字符串中可以直接调用变量，格式如下：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">a = Tom</span><br><span class="line">b = Jerry</span><br><span class="line">c = <span class="string">f'hello <span class="subst">&#123;a&#125;</span> and <span class="subst">&#123;b&#125;</span>'</span> <span class="comment"># 在格式化字符串中，使用大括号来引用变量</span></span><br><span class="line">print(c)</span><br><span class="line"><span class="comment"># 输出结果如下：</span></span><br><span class="line"><span class="comment"># hello Tom and Jerry</span></span><br><span class="line"><span class="comment"># </span></span><br><span class="line"><span class="comment"># ***Repl Closed***</span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h3 id="字符串的复制"><a href="#字符串的复制" class="headerlink" title="字符串的复制"></a>字符串的复制</h3><ul>
+<li>字符串的复制：将字符串与数字相乘，解释器会将字符串重复指定的次数并进行返回</li>
+</ul>
+<h2 id="布尔值和空值"><a href="#布尔值和空值" class="headerlink" title="布尔值和空值"></a>布尔值和空值</h2><h3 id="布尔值"><a href="#布尔值" class="headerlink" title="布尔值"></a>布尔值</h3><ul>
+<li>布尔值（boolean）：在Python中用<code>bool</code>表示，主要用来进行<strong>逻辑判断</strong>，一共就两个，即<code>True</code>和<code>False</code></li>
+</ul>
+<h3 id="空值"><a href="#空值" class="headerlink" title="空值"></a>空值</h3><ul>
+<li>空值（None）：在Python中用None表示空值</li>
+</ul>
+<h2 id="类型检查"><a href="#类型检查" class="headerlink" title="类型检查"></a>类型检查</h2><ul>
+<li>类型检查：通过类型检查，对值或者变量的类型</li>
+<li>使用<code>type()</code>函数来对变量或者值进行类型检查，该函数的返回值即为参数的类型</li>
+</ul>
+<h2 id="对象（Object）"><a href="#对象（Object）" class="headerlink" title="对象（Object）"></a>对象（Object）</h2><ul>
+<li>Python是一门面向对象的语言，至于面向对象，就向Java一样，同情况类比学习即可</li>
+<li>对象分为两大类<ul>
+<li>可变对象：值可以发生改变</li>
+<li>不可变对象：值不可以发生改变</li>
+</ul>
+</li>
+</ul>
+<h3 id="对象的结构"><a href="#对象的结构" class="headerlink" title="对象的结构"></a>对象的结构</h3><ul>
+<li>每个对象中都要保存三种数据<ul>
+<li>id（标识）<ul>
+<li>用来标识对象的唯一性，每个对象的id都是唯一的，类比我们的身份证号<ul>
+<li>可以通过<code>id()</code>函数来获取对象的id，而id是由解析器生成的，在<code>CPython</code>中我们获取到的id即为对象的存储地址</li>
+</ul>
+</li>
+<li>对象一旦创建，id就固定不变</li>
+</ul>
+</li>
+<li>type（类型）<ul>
+<li>用来标识当前对象所属类型，比如：<code>int</code>，<code>str</code>，<code>float</code>，<code>bool</code>等等</li>
+<li>显示的形式为<code>&lt;class &#39;int&#39;&gt;</code></li>
+<li>类型决定了该对象拥有哪些功能</li>
+<li>通过<code>type()</code>函数来查询对象的类型</li>
+<li>Python是一门强类型语言，类型一旦确定也不会改变</li>
+</ul>
+</li>
+<li>value（值）<ul>
+<li>对象中所存储的具体数据</li>
+<li>对于有些对象，值是可变的</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="变量和对象"><a href="#变量和对象" class="headerlink" title="变量和对象"></a>变量和对象</h3><ul>
+<li>对象并没有直接存储在变量之中，变量更像是对象的另一个名称。<strong>（对比堆栈内存去理解即可，这里变量就相当于Java之中的对象名，以此种方式去理解即可）</strong></li>
+<li>变量中存储的不是对象的值，而是对象的id（内存地址），当我们使用变量的时候，实际上在通过对象的id在查找相对应的对象</li>
+<li>变量中保存的对象，只有在为变量重新赋值的时候才会改变。</li>
+<li>变量和变量之间是相互独立的，修改一个变量并不会对其他变量有所影响</li>
+</ul>
+<h3 id="类型转换"><a href="#类型转换" class="headerlink" title="类型转换"></a>类型转换</h3><ul>
+<li>所谓类型转换，是将一个类型的对象转换为其他对象</li>
+<li>类型转换并不是改变对象本身的类型，而是将对象的值转换为一个新的对象（<strong>根据当前对象的值创建一个相对应类型的新的对象</strong>）</li>
+<li>类型转换的四个函数（<em>不对原来变量产生影响，并将转换结果作为返回值</em>）<ul>
+<li><code>int()</code>：用来将其他对象转换为<code>int</code>类型</li>
+<li><code>int()</code>转换规则：<ul>
+<li>布尔值：1-&gt;True，0-&gt;False</li>
+<li>浮点数：直接向下取整</li>
+<li>字符串：如果是一个合法的整数字符串，则直接转换为对应的数字；如果不合法，则报错</li>
+</ul>
+</li>
+<li><code>float()</code>：用来将其他对象转换为<code>float</code>类型</li>
+<li><code>float()</code>转换规则：<ul>
+<li>同<code>int()</code>类似，不同的是他会将对象转换为浮点数</li>
+</ul>
+</li>
+<li><code>str()</code>：用来将其他对象转换为<code>str</code>类型</li>
+<li><code>str()</code>转换规则：<ul>
+<li>将其他对象转换为字符串</li>
+</ul>
+</li>
+<li><code>bool()</code>：用来将其他对象转换为<code>bool</code>类型</li>
+<li><code>bool()</code>转换规则：<ul>
+<li>任何对象都可以转换为布尔值</li>
+<li>对于所有的表示空性的对象都会转换为<code>False</code>，其余的都转换为<code>True</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.jpg" alt="Guo Zhen 微信支付">
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.jpg" alt="Guo Zhen 支付宝">
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Python/" rel="tag"># Python</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/20191230_2.html" rel="next" title="Python语法入门">
+                <i class="fa fa-chevron-left"></i> Python语法入门
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/20191230SP01_Python内存机制.html" rel="prev" title="Python中变量在内存的存储与地址变化">
+                Python中变量在内存的存储与地址变化 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+  
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/avatar.jpg" alt="Guo Zhen">
+            
+              <p class="site-author-name" itemprop="name">Guo Zhen</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">35</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">21</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/wowgz" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-globe"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:WowGz7013@gmail.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Python数据类型"><span class="nav-number">1.</span> <span class="nav-text">Python数据类型</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#数值"><span class="nav-number">1.1.</span> <span class="nav-text">数值</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#整数"><span class="nav-number">1.1.1.</span> <span class="nav-text">整数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#浮点数（小数）"><span class="nav-number">1.1.2.</span> <span class="nav-text">浮点数（小数）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#字符串"><span class="nav-number">1.2.</span> <span class="nav-text">字符串</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#转义字符"><span class="nav-number">1.2.1.</span> <span class="nav-text">转义字符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#格式化字符串"><span class="nav-number">1.2.2.</span> <span class="nav-text">格式化字符串</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#字符串的复制"><span class="nav-number">1.2.3.</span> <span class="nav-text">字符串的复制</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#布尔值和空值"><span class="nav-number">1.3.</span> <span class="nav-text">布尔值和空值</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#布尔值"><span class="nav-number">1.3.1.</span> <span class="nav-text">布尔值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#空值"><span class="nav-number">1.3.2.</span> <span class="nav-text">空值</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#类型检查"><span class="nav-number">1.4.</span> <span class="nav-text">类型检查</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#对象（Object）"><span class="nav-number">1.5.</span> <span class="nav-text">对象（Object）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#对象的结构"><span class="nav-number">1.5.1.</span> <span class="nav-text">对象的结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#变量和对象"><span class="nav-number">1.5.2.</span> <span class="nav-text">变量和对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#类型转换"><span class="nav-number">1.5.3.</span> <span class="nav-text">类型转换</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2017 &mdash; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Guo Zhen</span>
+
+  
+</div>
+
+
+  <div class="powered-by">谢谢观看！</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">转载请标明出处
+  </div>
+
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      本站访客数
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      人次
+    </span>
+  
+
+  
+    <span class="site-pv">
+      本站总访问量
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      次
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'qSE5a0cgLNf3fIocQ5eAQO0F-gzGzoHsz',
+        appKey: 'SxnQ9KgF4vFIQlOKPWnDSTWS',
+        placeholder: 'Just go go',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
+
+
+
+  <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+  <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+   <script type="text/javascript">
+        var gitalk = new Gitalk({
+          clientID: '1634d04512fc7a3c2f93',
+          clientSecret: '38e9ba76a3ace65a37a4d72d6c144f8bdf9124d0',
+          repo: 'wowgz.github.io',
+          owner: 'wowGZ',
+          admin: ['wowGZ'],
+          id: location.pathname,
+          distractionFreeMode: 'true'
+        })
+        gitalk.render('gitalk-container')           
+       </script>
+
+  
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("qSE5a0cgLNf3fIocQ5eAQO0F-gzGzoHsz", "SxnQ9KgF4vFIQlOKPWnDSTWS");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+
+  
+  <script type="text/javascript" color="0,0,0" opacity="0.5" zindex="-1" count="150" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
+  
+</body>
+</html>
