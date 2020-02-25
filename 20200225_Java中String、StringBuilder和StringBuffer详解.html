@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo,Markdown,">
+  <meta name="keywords" content="Java,">
 
 
 
@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="Markdown中书写数学工具插入数学公式在Markdown中插入数学公式的语法是$数学公式$和$$数学公式$$。 行内公式是可以让公式在文中与文字或其他东西混编，不独占一行。  示例 1质能方程$E = mc^2$  显示  质能方程E=mc2E=mc2    独立公式使公式单独占一行，不与文中其他文字等混编。  示例 1质能方程$$E = mc^2$$  显示  质能方程 E=mc2E=mc2">
-<meta name="keywords" content="Hexo,Markdown">
+<meta name="description" content="Java中String、StringBuilder和StringBuffer详解关于可变性 简单的来说：String类中使用 final关键字字符数组保存字符串，private final　char　value[]，所以 String对象是不可变的。 StringBuilder与StringBuffer都继承自 AbstractStringBuilder类，在 AbstractStringBuil">
+<meta name="keywords" content="Java">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Markdown中书写数学工具">
-<meta property="og:url" content="https://wowgz.com.cn/Markdown中书写数学公式.html">
+<meta property="og:title" content="Java中String、StringBuilder和StringBuffer详解">
+<meta property="og:url" content="https://wowgz.com.cn/20200225_Java中String、StringBuilder和StringBuffer详解.html">
 <meta property="og:site_name" content="WowGz">
-<meta property="og:description" content="Markdown中书写数学工具插入数学公式在Markdown中插入数学公式的语法是$数学公式$和$$数学公式$$。 行内公式是可以让公式在文中与文字或其他东西混编，不独占一行。  示例 1质能方程$E = mc^2$  显示  质能方程E=mc2E=mc2    独立公式使公式单独占一行，不与文中其他文字等混编。  示例 1质能方程$$E = mc^2$$  显示  质能方程 E=mc2E=mc2">
+<meta property="og:description" content="Java中String、StringBuilder和StringBuffer详解关于可变性 简单的来说：String类中使用 final关键字字符数组保存字符串，private final　char　value[]，所以 String对象是不可变的。 StringBuilder与StringBuffer都继承自 AbstractStringBuilder类，在 AbstractStringBuil">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-03-13T14:41:09.990Z">
+<meta property="og:updated_time" content="2020-02-25T07:18:22.097Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Markdown中书写数学工具">
-<meta name="twitter:description" content="Markdown中书写数学工具插入数学公式在Markdown中插入数学公式的语法是$数学公式$和$$数学公式$$。 行内公式是可以让公式在文中与文字或其他东西混编，不独占一行。  示例 1质能方程$E = mc^2$  显示  质能方程E=mc2E=mc2    独立公式使公式单独占一行，不与文中其他文字等混编。  示例 1质能方程$$E = mc^2$$  显示  质能方程 E=mc2E=mc2">
+<meta name="twitter:title" content="Java中String、StringBuilder和StringBuffer详解">
+<meta name="twitter:description" content="Java中String、StringBuilder和StringBuffer详解关于可变性 简单的来说：String类中使用 final关键字字符数组保存字符串，private final　char　value[]，所以 String对象是不可变的。 StringBuilder与StringBuffer都继承自 AbstractStringBuilder类，在 AbstractStringBuil">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="https://wowgz.com.cn/Markdown中书写数学公式.html">
+  <link rel="canonical" href="https://wowgz.com.cn/20200225_Java中String、StringBuilder和StringBuffer详解.html">
 
 
 
 
 
-  <title>Markdown中书写数学工具 | WowGz</title>
+  <title>Java中String、StringBuilder和StringBuffer详解 | WowGz</title>
   
 
 
@@ -259,7 +259,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://wowgz.com.cn/Markdown中书写数学公式.html">
+    <link itemprop="mainEntityOfPage" href="https://wowgz.com.cn/20200225_Java中String、StringBuilder和StringBuffer详解.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Guo Zhen">
@@ -276,7 +276,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">Markdown中书写数学工具</h2>
+          <h2 class="post-title" itemprop="name headline">Java中String、StringBuilder和StringBuffer详解</h2>
         
 
         <div class="post-meta">
@@ -288,8 +288,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-13T22:39:27+08:00">
-                2019-03-13
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-02-25T15:06:21+08:00">
+                2020-02-25
               </time>
             
 
@@ -311,8 +311,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/博客搭建/" itemprop="url" rel="index">
-                    <span itemprop="name">博客搭建</span>
+                  <a href="/categories/学习笔记/" itemprop="url" rel="index">
+                    <span itemprop="name">学习笔记</span>
                   </a>
                 </span>
 
@@ -329,8 +329,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/Markdown中书写数学公式.html#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/Markdown中书写数学公式.html" itemprop="commentCount"></span>
+                <a href="/20200225_Java中String、StringBuilder和StringBuffer详解.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/20200225_Java中String、StringBuilder和StringBuffer详解.html" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -338,7 +338,7 @@
 
           
           
-             <span id="/Markdown中书写数学公式.html" class="leancloud_visitors" data-flag-title="Markdown中书写数学工具">
+             <span id="/20200225_Java中String、StringBuilder和StringBuffer详解.html" class="leancloud_visitors" data-flag-title="Java中String、StringBuilder和StringBuffer详解">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -368,516 +368,27 @@
       
 
       
-        <h1 id="Markdown中书写数学工具"><a href="#Markdown中书写数学工具" class="headerlink" title="Markdown中书写数学工具"></a>Markdown中书写数学工具</h1><h1 id="插入数学公式"><a href="#插入数学公式" class="headerlink" title="插入数学公式"></a>插入数学公式</h1><p>在Markdown中插入数学公式的语法是<code>$数学公式$</code>和<code>$$数学公式$$</code>。</p>
-<p><strong>行内公式</strong>是可以让公式在文中与文字或其他东西混编，不独占一行。</p>
-<ul>
-<li><p><strong>示例</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">质能方程$E = mc^2$</span><br></pre></td></tr></table></figure>
-</li>
-<li><p><strong>显示</strong></p>
-<blockquote>
-<p>质能方程E=mc2E=mc2</p>
-</blockquote>
-</li>
+        <h1 id="Java中String、StringBuilder和StringBuffer详解"><a href="#Java中String、StringBuilder和StringBuffer详解" class="headerlink" title="Java中String、StringBuilder和StringBuffer详解"></a>Java中String、StringBuilder和StringBuffer详解</h1><h2 id="关于可变性"><a href="#关于可变性" class="headerlink" title="关于可变性"></a>关于可变性</h2><ul>
+<li>简单的来说：<code>String</code>类中使用 <code>final</code>关键字字符数组保存字符串，<code>private final　char　value[]</code>，所以 <code>String</code>对象是不可变的。</li>
+<li><code>StringBuilder</code>与<code>StringBuffer</code>都继承自 <code>AbstractStringBuilder</code>类，在 <code>AbstractStringBuilder</code>中也是使用字符数组保存字符串 <code>char[]value</code> 但是没有用 <code>final</code>关键字修饰，所以这两种对象都是可变的。<code>StringBuilder</code>与 <code>StringBuffer</code>的构造方法都是调用父类构造方法也就是<code>AbstractStringBuilder</code>实现的，大家可以自行查阅源码。</li>
 </ul>
-<p><strong>独立公式</strong>使公式单独占一行，不与文中其他文字等混编。</p>
-<ul>
-<li><p><strong>示例</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">质能方程$$E = mc^2$$</span><br></pre></td></tr></table></figure>
-</li>
-<li><p><strong>显示</strong></p>
-<blockquote>
-<p>质能方程</p>
-<p>E=mc2E=mc2</p>
-</blockquote>
-</li>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">abstract</span> <span class="class"><span class="keyword">class</span> <span class="title">AbstractStringBuilder</span> <span class="keyword">implements</span> <span class="title">Appendable</span>, <span class="title">CharSequence</span> </span>&#123;</span><br><span class="line"><span class="keyword">char</span>[] value;</span><br><span class="line"><span class="keyword">int</span> count;</span><br><span class="line">AbstractStringBuilder() &#123;</span><br><span class="line">&#125;</span><br><span class="line">AbstractStringBuilder(<span class="keyword">int</span> capacity) &#123;</span><br><span class="line">value = <span class="keyword">new</span> <span class="keyword">char</span>[capacity];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="关于线程安全性"><a href="#关于线程安全性" class="headerlink" title="关于线程安全性"></a>关于线程安全性</h2><ul>
+<li><code>String</code>中的对象是不可变的，也就可以理解为常量，线程安全。</li>
+<li><code>AbstractStringBuilder</code>是 <code>StringBuilder</code>与 <code>StringBuffer</code>的公共父类，定义了一些字符串的基本操作，如 <code>expandCapacity</code>、<code>append</code>、<code>insert</code>、<code>indexOf</code>等公共方法。</li>
+<li><code>StringBuffer</code>对方法加了同步锁或者对调用的方法加了同步锁，所以是线程安全的。</li>
+<li><code>StringBuilder</code>并没有对方法进行加同步锁，所以是非线程安全的。 </li>
 </ul>
-<h1 id="普通公式"><a href="#普通公式" class="headerlink" title="普通公式"></a>普通公式</h1><p>普通的加减乘除数学公式的输入方法与平常的书写一样。</p>
-<ul>
-<li><p><strong>示例</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$$x = 100 * y + z - 10 / 33 + 10 % 3$$</span><br></pre></td></tr></table></figure>
-</li>
-<li><p><strong>显示</strong></p>
-<blockquote>
-<p>x=100∗y+z−10/33+10x=100∗y+z−10/33+10</p>
-</blockquote>
-</li>
+<h2 id="关于性能"><a href="#关于性能" class="headerlink" title="关于性能"></a>关于性能</h2><ul>
+<li>每次对 <code>String</code>类型进行改变的时候，都会生成一个新的 <code>String</code>对象，然后将指针指向新的 <code>String</code>对象。</li>
+<li><code>StringBuffer</code>每次都会对 <code>StringBuffer</code>对象本身进行操作，而不是生成新的对象并改变对象引用。</li>
+<li>相同情况下使用<code>StringBuilder</code>相比使用 <code>StringBuffer</code>仅能获得 10%~15% 左右的性能提升，但却要冒多线程不安全的风险。</li>
 </ul>
-<h1 id="上下标"><a href="#上下标" class="headerlink" title="上下标"></a>上下标</h1><p>使用<code>^</code>来表示上标，<code>_</code>来表示下标，同时如果上下标的内容多于一个字符，可以使用<code>{}</code>来将这些内容括起来当做一个整体。<br>与此同时，上下标是可以嵌套的。</p>
-<ul>
-<li><p><strong>示例</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$$x = a_&#123;1&#125;^n + a_&#123;2&#125;^n + a_&#123;3&#125;^n$$</span><br></pre></td></tr></table></figure>
-</li>
-<li><p><strong>显示</strong></p>
-<blockquote>
-<p>x=an1+an2+an3x=a1n+a2n+a3n</p>
-</blockquote>
-</li>
-</ul>
-<p>如果希望左右两边都能有上下标，可以使用<code>\sideset</code>语法</p>
-<ul>
-<li><p><strong>示例</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$$\sideset&#123;^1_2&#125;&#123;^3_4&#125;A$$</span><br></pre></td></tr></table></figure>
-</li>
-<li><p><strong>显示</strong></p>
-<blockquote>
-<p>12A34A21A43</p>
-</blockquote>
-</li>
-</ul>
-<h1 id="括号"><a href="#括号" class="headerlink" title="括号"></a>括号</h1><p><code>()</code>，<code>[]</code>和<code>|</code>都表示它们自己，但是<code>{}</code>因为有特殊作用因此当需要显示大括号时一般使用<code>\lbrace \rbrace</code>来表示。</p>
-<ul>
-<li><p><strong>示例</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$$f(x, y) = 100 * \lbrace[(x + y) * 3] - 5\rbrace$$</span><br></pre></td></tr></table></figure>
-</li>
-<li><p><strong>显示</strong></p>
-<blockquote>
-<p>f(x,y)=100∗{[(x+y)∗3]−5}f(x,y)=100∗{[(x+y)∗3]−5}</p>
-</blockquote>
-</li>
-</ul>
-<h1 id="分数"><a href="#分数" class="headerlink" title="分数"></a>分数</h1><p>分数使用<code>\frac{分母}{分子}</code>这样的语法，不过推荐使用<code>\cfrac</code>来代替<code>\frac</code>，显示公式不会太挤。</p>
-<ul>
-<li><p><strong>示例</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$$\frac&#123;1&#125;&#123;3&#125; 与 \cfrac&#123;1&#125;&#123;3&#125;$$</span><br></pre></td></tr></table></figure>
-</li>
-<li><p><strong>显示</strong></p>
-<blockquote>
-<p>13与1313与13</p>
-</blockquote>
-</li>
-</ul>
-<h1 id="开方"><a href="#开方" class="headerlink" title="开方"></a>开方</h1><p>开方使用<code>\sqrt[次数]{被开方数}</code>这样的语法</p>
-<ul>
-<li><p><strong>示例</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$$\sqrt[3]&#123;X&#125;$$</span><br><span class="line">$$\sqrt&#123;5 - x&#125;$$</span><br></pre></td></tr></table></figure>
-</li>
-<li><p><strong>显示</strong></p>
-<blockquote>
-<p>X−−√3X3</p>
-<p>5−x−−−−√5−x</p>
-</blockquote>
-</li>
-</ul>
-<h1 id="希腊字母"><a href="#希腊字母" class="headerlink" title="希腊字母"></a>希腊字母</h1><p>见下表</p>
-<table>
-<thead>
-<tr>
-<th>代码</th>
-<th>大写</th>
-<th>代码</th>
-<th>小写</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>A</code></td>
-<td>AA</td>
-<td><code>\alpha</code></td>
-<td>αα</td>
-</tr>
-<tr>
-<td><code>B</code></td>
-<td>BB</td>
-<td><code>\beta</code></td>
-<td>ββ</td>
-</tr>
-<tr>
-<td><code>\Gamma</code></td>
-<td>ΓΓ</td>
-<td><code>\gamma</code></td>
-<td>γγ</td>
-</tr>
-<tr>
-<td><code>\Delta</code></td>
-<td>ΔΔ</td>
-<td><code>\delta</code></td>
-<td>δδ</td>
-</tr>
-<tr>
-<td><code>E</code></td>
-<td>EE</td>
-<td><code>\epsilon</code></td>
-<td>ϵϵ</td>
-</tr>
-<tr>
-<td><code>Z</code></td>
-<td>ZZ</td>
-<td><code>\zeta</code></td>
-<td>ζζ</td>
-</tr>
-<tr>
-<td><code>H</code></td>
-<td>HH</td>
-<td><code>\eta</code></td>
-<td>ηη</td>
-</tr>
-<tr>
-<td><code>\Theta</code></td>
-<td>ΘΘ</td>
-<td><code>\theta</code></td>
-<td>θθ</td>
-</tr>
-<tr>
-<td><code>I</code></td>
-<td>II</td>
-<td><code>\iota</code></td>
-<td>ιι</td>
-</tr>
-<tr>
-<td><code>K</code></td>
-<td>KK</td>
-<td><code>\kappa</code></td>
-<td>κκ</td>
-</tr>
-<tr>
-<td><code>\Lambda</code></td>
-<td>ΛΛ</td>
-<td><code>\lambda</code></td>
-<td>λλ</td>
-</tr>
-<tr>
-<td><code>M</code></td>
-<td>MM</td>
-<td><code>\mu</code></td>
-<td>μμ</td>
-</tr>
-<tr>
-<td><code>N</code></td>
-<td>NN</td>
-<td><code>\nu</code></td>
-<td>νν</td>
-</tr>
-<tr>
-<td><code>\Xi</code></td>
-<td>ΞΞ</td>
-<td><code>\xi</code></td>
-<td>ξξ</td>
-</tr>
-<tr>
-<td><code>O</code></td>
-<td>OO</td>
-<td><code>\omicron</code></td>
-<td>οο</td>
-</tr>
-<tr>
-<td><code>\Pi</code></td>
-<td>ΠΠ</td>
-<td><code>\pi</code></td>
-<td>ππ</td>
-</tr>
-<tr>
-<td><code>P</code></td>
-<td>PP</td>
-<td><code>\rho</code></td>
-<td>ρρ</td>
-</tr>
-<tr>
-<td><code>\Sigma</code></td>
-<td>ΣΣ</td>
-<td><code>\sigma</code></td>
-<td>σσ</td>
-</tr>
-<tr>
-<td><code>T</code></td>
-<td>TT</td>
-<td><code>\tau</code></td>
-<td>ττ</td>
-</tr>
-<tr>
-<td><code>\Upsilon</code></td>
-<td>ΥΥ</td>
-<td><code>\upsilon</code></td>
-<td>υυ</td>
-</tr>
-<tr>
-<td><code>\Phi</code></td>
-<td>ΦΦ</td>
-<td><code>\phi</code></td>
-<td>ϕϕ</td>
-</tr>
-<tr>
-<td><code>X</code></td>
-<td>XX</td>
-<td><code>\chi</code></td>
-<td>χχ</td>
-</tr>
-<tr>
-<td><code>\Psi</code></td>
-<td>ΨΨ</td>
-<td><code>\psi</code></td>
-<td>ψψ</td>
-</tr>
-<tr>
-<td><code>\Omega</code></td>
-<td>ΩΩ</td>
-<td><code>\omega</code></td>
-<td>ωω</td>
-</tr>
-</tbody>
-</table>
-<h1 id="其他字符"><a href="#其他字符" class="headerlink" title="其他字符"></a>其他字符</h1><h2 id="关系运算符"><a href="#关系运算符" class="headerlink" title="关系运算符"></a>关系运算符</h2><table>
-<thead>
-<tr>
-<th>符号</th>
-<th>代码</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>±±</td>
-<td><code>\pm</code></td>
-</tr>
-<tr>
-<td>××</td>
-<td><code>\times</code></td>
-</tr>
-<tr>
-<td>÷÷</td>
-<td><code>\div</code></td>
-</tr>
-<tr>
-<td>∣∣</td>
-<td><code>\mid</code></td>
-</tr>
-<tr>
-<td>∤∤</td>
-<td><code>\nmid</code></td>
-</tr>
-<tr>
-<td>⋅⋅</td>
-<td><code>\cdot</code></td>
-</tr>
-<tr>
-<td>∘∘</td>
-<td><code>\circ</code></td>
-</tr>
-<tr>
-<td>∗∗</td>
-<td><code>\ast</code></td>
-</tr>
-<tr>
-<td>⨀⨀</td>
-<td><code>\bigodot</code></td>
-</tr>
-<tr>
-<td>⨂⨂</td>
-<td><code>\bigotimes</code></td>
-</tr>
-<tr>
-<td>⨁⨁</td>
-<td><code>\bigoplus</code></td>
-</tr>
-<tr>
-<td>≤≤</td>
-<td><code>\leq</code></td>
-</tr>
-<tr>
-<td>≥≥</td>
-<td><code>\geq</code></td>
-</tr>
-<tr>
-<td>≠≠</td>
-<td><code>\neq</code></td>
-</tr>
-<tr>
-<td>≈≈</td>
-<td><code>\approx</code></td>
-</tr>
-<tr>
-<td>≡≡</td>
-<td><code>\equiv</code></td>
-</tr>
-<tr>
-<td>∑∑</td>
-<td><code>\sum</code></td>
-</tr>
-<tr>
-<td>∏∏</td>
-<td><code>\prod</code></td>
-</tr>
-<tr>
-<td>∐∐</td>
-<td><code>\coprod</code></td>
-</tr>
-</tbody>
-</table>
-<h2 id="集合运算符"><a href="#集合运算符" class="headerlink" title="集合运算符"></a>集合运算符</h2><table>
-<thead>
-<tr>
-<th>符号</th>
-<th>代码</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>∅∅</td>
-<td><code>\emptyset</code></td>
-</tr>
-<tr>
-<td>∈∈</td>
-<td><code>\in</code></td>
-</tr>
-<tr>
-<td>∉∉</td>
-<td><code>\notin</code></td>
-</tr>
-<tr>
-<td>⊂⊂</td>
-<td><code>\subset</code></td>
-</tr>
-<tr>
-<td>⊃⊃</td>
-<td><code>\supset</code></td>
-</tr>
-<tr>
-<td>⊆⊆</td>
-<td><code>\subseteq</code></td>
-</tr>
-<tr>
-<td>⊇⊇</td>
-<td><code>\supseteq</code></td>
-</tr>
-<tr>
-<td>⋂⋂</td>
-<td><code>\bigcap</code></td>
-</tr>
-<tr>
-<td>⋃⋃</td>
-<td><code>\bigcup</code></td>
-</tr>
-<tr>
-<td>⋁⋁</td>
-<td><code>\bigvee</code></td>
-</tr>
-<tr>
-<td>⋀⋀</td>
-<td><code>\bigwedge</code></td>
-</tr>
-<tr>
-<td>⨄⨄</td>
-<td><code>\biguplus</code></td>
-</tr>
-<tr>
-<td>⨆⨆</td>
-<td><code>\bigsqcup</code></td>
-</tr>
-</tbody>
-</table>
-<h2 id="对数运算符"><a href="#对数运算符" class="headerlink" title="对数运算符"></a>对数运算符</h2><table>
-<thead>
-<tr>
-<th>符号</th>
-<th>代码</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>loglog</td>
-<td><code>\log</code></td>
-</tr>
-<tr>
-<td>lglg</td>
-<td><code>\lg</code></td>
-</tr>
-<tr>
-<td>lnln</td>
-<td><code>\ln</code></td>
-</tr>
-</tbody>
-</table>
-<h2 id="三角运算符"><a href="#三角运算符" class="headerlink" title="三角运算符"></a>三角运算符</h2><table>
-<thead>
-<tr>
-<th>符号</th>
-<th>代码</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>⊥⊥</td>
-<td><code>\bot</code></td>
-</tr>
-<tr>
-<td>∠∠</td>
-<td><code>\angle</code></td>
-</tr>
-<tr>
-<td>sinsin</td>
-<td><code>\sin</code></td>
-</tr>
-<tr>
-<td>coscos</td>
-<td><code>\cos</code></td>
-</tr>
-<tr>
-<td>tantan</td>
-<td><code>\tan</code></td>
-</tr>
-<tr>
-<td>cotcot</td>
-<td><code>\cot</code></td>
-</tr>
-<tr>
-<td>secsec</td>
-<td><code>\sec</code></td>
-</tr>
-<tr>
-<td>csccsc</td>
-<td><code>\csc</code></td>
-</tr>
-</tbody>
-</table>
-<h2 id="微积分运算符"><a href="#微积分运算符" class="headerlink" title="微积分运算符"></a>微积分运算符</h2><table>
-<thead>
-<tr>
-<th>符号</th>
-<th>代码</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>′′</td>
-<td><code>\prime</code></td>
-</tr>
-<tr>
-<td>∫∫</td>
-<td><code>\int</code></td>
-</tr>
-<tr>
-<td>∬∬</td>
-<td><code>\iint</code></td>
-</tr>
-<tr>
-<td>∭∭</td>
-<td><code>\iiint</code></td>
-</tr>
-<tr>
-<td>∬∬⨌</td>
-<td><code>\iiiint</code></td>
-</tr>
-<tr>
-<td>∮∮</td>
-<td><code>\oint</code></td>
-</tr>
-<tr>
-<td>limlim</td>
-<td><code>\lim</code></td>
-</tr>
-<tr>
-<td>∞∞</td>
-<td><code>\infty</code></td>
-</tr>
-<tr>
-<td>∇∇</td>
-<td><code>\nabla</code></td>
-</tr>
-<tr>
-<td>dd</td>
-<td><code>\mathrm{d}</code></td>
-</tr>
-</tbody>
-</table>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><ol>
+<li>操作少量的数据 = <code>String</code></li>
+<li>单线程操作字符串缓冲区下操作大量数据 = <code>StringBuilder</code></li>
+<li>多线程操作字符串缓冲区下操作大量数据 = <code>StringBuffer</code></li>
+</ol>
 
       
     </div>
@@ -924,9 +435,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Hexo/" rel="tag"># Hexo</a>
-          
-            <a href="/tags/Markdown/" rel="tag"># Markdown</a>
+            <a href="/tags/Java/" rel="tag"># Java</a>
           
         </div>
       
@@ -939,8 +448,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/博弈心理学（二）.html" rel="next" title="博弈心理学（二）">
-                <i class="fa fa-chevron-left"></i> 博弈心理学（二）
+              <a href="/20200111SP01_解决pip或pipenv下载过慢的问题.html" rel="next" title="解决pip或pipenv下载过慢的问题">
+                <i class="fa fa-chevron-left"></i> 解决pip或pipenv下载过慢的问题
               </a>
             
           </div>
@@ -948,10 +457,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/简述Markdown语法.html" rel="prev" title="简述Markdown语法">
-                简述Markdown语法 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -1104,7 +609,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Markdown中书写数学工具"><span class="nav-number">1.</span> <span class="nav-text">Markdown中书写数学工具</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#插入数学公式"><span class="nav-number">2.</span> <span class="nav-text">插入数学公式</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#普通公式"><span class="nav-number">3.</span> <span class="nav-text">普通公式</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#上下标"><span class="nav-number">4.</span> <span class="nav-text">上下标</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#括号"><span class="nav-number">5.</span> <span class="nav-text">括号</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#分数"><span class="nav-number">6.</span> <span class="nav-text">分数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#开方"><span class="nav-number">7.</span> <span class="nav-text">开方</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#希腊字母"><span class="nav-number">8.</span> <span class="nav-text">希腊字母</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#其他字符"><span class="nav-number">9.</span> <span class="nav-text">其他字符</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#关系运算符"><span class="nav-number">9.1.</span> <span class="nav-text">关系运算符</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#集合运算符"><span class="nav-number">9.2.</span> <span class="nav-text">集合运算符</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#对数运算符"><span class="nav-number">9.3.</span> <span class="nav-text">对数运算符</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三角运算符"><span class="nav-number">9.4.</span> <span class="nav-text">三角运算符</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#微积分运算符"><span class="nav-number">9.5.</span> <span class="nav-text">微积分运算符</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Java中String、StringBuilder和StringBuffer详解"><span class="nav-number">1.</span> <span class="nav-text">Java中String、StringBuilder和StringBuffer详解</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#关于可变性"><span class="nav-number">1.1.</span> <span class="nav-text">关于可变性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#关于线程安全性"><span class="nav-number">1.2.</span> <span class="nav-text">关于线程安全性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#关于性能"><span class="nav-number">1.3.</span> <span class="nav-text">关于性能</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结"><span class="nav-number">1.4.</span> <span class="nav-text">总结</span></a></li></ol></li></ol></div>
             
 
           </div>
